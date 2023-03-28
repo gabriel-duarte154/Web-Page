@@ -28,7 +28,7 @@ body, html {
 header {
 
     display: flex;
-    background-image: linear-gradient(90deg, var(--cor2), var(--cor3), var(--cor4));
+    background-image: linear-gradient(-180deg, #0b0120, #20074C, #0c0122 );
     justify-content: center;
     padding: 0px 20px 100px 20px;
 }
@@ -50,8 +50,9 @@ nav {
 
 .logo {
 
-    width: 80px;
-    transform: translate(-20px);
+    width: 100px;
+    transform: translate(-30px, 20px);
+    
 }
 
 i.menu-icon {
@@ -122,7 +123,8 @@ div.main-header {
     justify-content: center;
     position: relative;
     flex-shrink: 0;
-    background-color: var(--cor4);
+    background-image: linear-gradient(90deg, #1f035c, #340c7a, #1e0358 );
+    background-color: ;
     color: #e5e7eb;
     padding: 5px 20px;
     border-radius: 10px;
@@ -133,6 +135,10 @@ div.main-header {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.356);
     overflow: hidden;
     
+}
+
+.efect:hover {
+    text-shadow: 5px -2px 8px #ab26e9;
 }
 
 .efect::before {
@@ -208,10 +214,10 @@ main > div {
 
 .container-cards  img {
 
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
     border-radius: 10px;
-    background-image: linear-gradient(90deg, var(--cor2), var(--cor3), var(--cor4));
+    background-image: linear-gradient(90deg, #0D0127, #20074C, #0D0127 );
 }
 
 .second-main-div{
@@ -219,17 +225,24 @@ main > div {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #e5e7eb;
+    background: url(../image/night-sky-with-palm.png) center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     font-size: 24px;
     font-style: italic;
     color: #1f2937;
     padding: 0 20px;
+
 }
 
 div.quote-container {
 
     display: flex;
     max-width: 900px;
+    background-color: rgba(255, 255, 255, 0.685);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.466);
 }
 
 div.cite {
@@ -297,7 +310,7 @@ div.cite {
 footer {
 
     text-align: center;
-    background-color: var(--cor4);
+    background-color: #0D0127;
     color: #e5e7eb;
     width: 100%;
     padding: 20px;
