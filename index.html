@@ -7,17 +7,22 @@
     <title>Web page</title>
     <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/small-device.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
-<body>
+<body onresize="ajuste()">
     <header>
         <div class="container">
             <nav>
                 <img src="image/logo.png" alt="Passaro de muitas cores" class="logo">
                 <menu>
-                    <ul>
-                        <li><a href="#">header link one</a></li>
-                        <li><a href="#">header link two</a></li>
-                        <li><a href="#">header link three</a></li>
+                    <i class="material-symbols-outlined menu-icon" onclick="menu()" id="iconMenu">
+                        menu
+                    </i>
+                    <ul id="list">
+                        <li><a href="#" class="efect">header link one</a></li>
+                        <li><a href="#" class="efect">header link two</a></li>
+                        <li><a href="#" class="efect">header link three</a></li>
                     </ul>
                 </menu>
             </nav>
@@ -25,9 +30,9 @@
                 <div class="header-text">
                     <h1>This web site is awesome</h1>
                     <p>This web site has a subtext that goes here under de main text, it's a smaller font and the color have a  smaller contrast with the background.</p>
-                    <button>Sign up</button>
+                    <button class="efect">Sign up</button>
                 </div>
-                <img  class="header-img" src="image/header-image.jpg." alt="">
+                <img  class="header-img" src="image/header-image.jpg," alt="">
             </div>
         </div>
     </header>
@@ -83,5 +88,34 @@
                 Copyright <a href="https://github.com/gabriel-duarte154/Web-Page" target="_blank">&copy;Gabriel júnior</a> 2023
         </footer>
     </main>
+    <script>
+        function ajuste() {
+            
+            if (window.innerWidth > 865 ){
+
+                list.style.display = "flex"
+                iconMenu.style.display = "none"
+            
+            } else {
+
+                list.style.display = "none"
+                iconMenu.style.display = "flex"
+                iconMenu.innerHTML = "menu"
+            }
+
+        }
+       function menu() {
+
+        if (list.style.display == "flex"){
+            list.style.display = "none"
+            iconMenu.innerHTML = "menu"
+            
+        } else {
+            list.style.display = "flex"
+            iconMenu.innerHTML = "close"
+        }
+
+       }
+    </script>
 </body>
 </html>

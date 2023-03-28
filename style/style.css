@@ -8,7 +8,7 @@
     --cor2: #911FC7;
     --cor3: #1214B1;
     --cor4: #0A0977;
-    
+    --cor6: #1f2937;
 }
 
 * {
@@ -22,15 +22,15 @@
 body, html {
 
     height: 100vh;
+    transition: .5s;
 }
 
 header {
 
     display: flex;
-    background-color: #1f2937;
+    background-image: linear-gradient(90deg, var(--cor2), var(--cor3), var(--cor4));
     justify-content: center;
     padding: 0px 20px 100px 20px;
-    flex-wrap: wrap;
 }
 .container {
 
@@ -54,6 +54,11 @@ nav {
     transform: translate(-20px);
 }
 
+i.menu-icon {
+    display: none;
+    color: #911FC7;
+}
+
 ul {
 
     list-style-type: none;
@@ -64,6 +69,8 @@ ul {
 
 ul a {
 
+    display: flex;
+    position: relative;
     color: #e5e7eb;
     text-decoration: none;
 }
@@ -75,20 +82,24 @@ div.main-header {
     gap: 30px;
     justify-content: space-between;
     height: 300px;
+    
 }
 
 .header-img {
 
-    flex: 1 500px;
+
+    width: 60%;
     border-radius: 10px 20px;
     background-color: #e5e7eb;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.336)
 }
 
 .header-text {
 
-    flex: 1 300px;
+    width: 40%;
     display: flex;
     flex-direction: column;
+    
 }
 
 .header-text > h1 {
@@ -96,7 +107,6 @@ div.main-header {
     font-size: 48px;
     font-weight: bolder;
     color: #f9faf8;
-    line-height: 1em;
 } 
 
 .header-text > p {
@@ -108,7 +118,11 @@ div.main-header {
 
 .header-text > button {
 
-    background-color: #388296 ;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+    background-color: var(--cor4);
     color: #e5e7eb;
     padding: 5px 20px;
     border-radius: 10px;
@@ -116,8 +130,28 @@ div.main-header {
     font-weight: bold;
     width: 100px;
     cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.356);
+    overflow: hidden;
+    
 }
 
+.efect::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 8%;
+    background-color: var(--cor2);
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.27);
+    color: #e5e7eb;
+    
+}
+
+ .efect:hover::before {
+    width: 100%;
+}
 
 main {
 
@@ -216,8 +250,7 @@ div.cite {
 
     display: flex;
     flex-basis: 1000px;
-    max-width: 1000px;
-    background-color: #388296;
+    background-color: var(--cor6);
     color: white;
     border-radius: 10px;
     padding: 40px 100px;
@@ -232,14 +265,22 @@ div.cite {
     align-items: center;
 }
 
+
 .action-button > button {
 
     color: white;
-    background-color: #388296;
+    background-color: var(--cor6);
     border: 2px solid white;
     padding: 5px 20px;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.5s;
+}
+
+.action-button > button:hover {
+    
+    background-color: #e5e7eb9d;
+    color: black;
 }
 
 .action-text > .header-action {
@@ -256,7 +297,7 @@ div.cite {
 footer {
 
     text-align: center;
-    background-color: #1f2937;
+    background-color: var(--cor4);
     color: #e5e7eb;
     width: 100%;
     padding: 20px;

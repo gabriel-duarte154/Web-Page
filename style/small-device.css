@@ -1,0 +1,122 @@
+@media screen and (max-width: 865px){
+
+    
+    div.main-header {
+        flex-direction: column;
+        max-width: 600px;
+        flex-wrap: wrap;
+        height: max-content;
+    }
+    nav {
+        
+    }
+
+    .header-img {
+        display: none;
+    }
+
+    .header-text {
+
+        align-self: center;
+        width: 60%;
+    }
+
+    .header-text  h1  {
+
+        font-size: 1.4em;
+    }
+
+    .header-text p {
+
+        font-size: 1em;
+    }
+
+    menu {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    i.menu-icon {
+        display: flex;
+        color: #911FC7;
+        cursor: pointer;
+        align-self: flex-end;
+        font-size: 30px; 
+    }
+
+    ul {
+
+        display: none;
+        flex-direction: column;
+    }
+
+    main > div {
+
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+
+    }
+
+    .container-cards {
+
+        flex-direction: column;
+        gap: 50px;
+
+    }
+
+    .container-cards  img {
+
+        height: 200px;
+        width: 300px;
+        border-radius: 10px;
+        background-image: linear-gradient(90deg, var(--cor2), var(--cor3), var(--cor4));
+    }
+
+    .second-main-div{
+
+       margin: 50px 0;
+    }
+
+    div.quote-container {
+
+        margin: 50px;
+    }
+    
+    div.quote {
+
+        font-size: 18px;
+    }
+
+    div.cite {
+
+        font-size: 12px;
+    }
+    
+    .action {
+
+        flex-direction: column;
+        gap: 20px;
+        flex-basis: 60%;
+        padding: 20px;
+        margin-bottom: 50px;
+    }
+
+    .action-text > .header-action {
+
+        font-size: 18px;
+    }
+
+    .action-text > p {
+
+        font-size: 14px ;
+    }
+    
+    footer {
+
+        padding: 10px;
+        font-size: 10px;
+    }
+}
